@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-straight/css/uicons-thin-straight.css');
+
+
+body {
+    background-image: url("../Images/landingpagebg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center/cover;
+    /* background-attachment: fixed; */
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.navbar-custom {
+    background-color: #A4C1C3;
+}
+
+nav ul li a:hover {
+    transition: all 0.3s;
+}
+
+nav div div img {
+    height: 50px;
+    margin-right: 10px;
+    margin-right: 0.5em;
+}
+
+/* start of Hero scetion */
+.welcome {
+    margin-top: 1dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#changeText {
+    font-family: 'Times New Roman', Times, serif;
+    color: darkkhaki;
+}
+
+#changeText:after {
+    content: "";
+    animation-name: changeTextAnim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changeTextAnim {
+    0% {
+        content: " India ";
+    }
+
+    10% {
+        content: "  USA  ";
+    }
+
+    20% {
+        content: " Bangkok  ";
+    }
+
+    30% {
+        content: "France";
+    }
+
+    40% {
+        content: " Australia ";
+    }
+
+    50% {
+        content: "Egypt";
+    }
+
+    60% {
+        content: " Morocco ";
+    }
+
+    70% {
+        content: "South Africa";
+    }
+
+    80% {
+        content: "Germany";
+    }
+
+    90% {
+        content: "Sydney";
+    }
+
+    100% {
+        content: "India";
+    }
+}
+
+/* Starting of Booking section */
+.formInput button {
+    padding: 5px 20px;
+    /* margin: 3px; */
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 15px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.formInput button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: goldenrod;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.formInput button:hover {
+    color: #e8e8e8;
+}
+
+.formInput button:hover::before {
+    width: 100%;
+}
+
+
+/* Ending of Hero Section  */
+
+#booking-section .container {
+    height: auto;
+    border-radius: 8px;
+    background-color: whitesmoke;
+
+}
+
+#bookImage {
+    height: 25rem;
+    width: 26rem;
+    border-radius: 5px;
+}
+
+.formInput input,
+.formInput textarea {
+    width: 100%;
+    font-family: "Work Sans", sans-serif;
+    border-radius: 5px;
+    padding: 6px 8px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* @media screen and (min-width:320px) and (max-width:480px) {
+    #bookImage{
+        height: 20rem;
+        width: 23rem;
+        border-radius: 5px;
+    }  
+} */
+/* Ending of Booking Section */
+
+/* Starging of Package Section */
+.card-body h5 {
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.card-body h6 {
+    font-size: 0.8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card-text {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card button {
+    padding: 5px 12px;
+    /* margin-top: -6dvh; */
+    border: unset;
+    border-radius: 5px;
+    color: rgb(48, 47, 47);
+    /* color: #212121; */
+    z-index: 1;
+    background: goldenrod;
+    /* background: goldenrod; */
+    position: relative;
+    font-weight: 1000;
+    font-size: 15px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    /* width: 130%; */
+}
+
+.card button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    background-color: rgb(67, 65, 65);
+    /* background-color: goldenrod; */
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.card button:hover {
+    color: goldenrod;
+    /* color: #e8e8e8; */
+}
+
+.card button:hover::before {
+    width: 100%;
+}
+
+.card {
+    /* background-color: #e3e3e3; */
+    background-color: whitesmoke;
+    box-shadow: 16px 16px 32px #c8c8c8,
+        -16px -16px 32px #fefefe;
+    box-shadow: 8px 8px 20px #c8c8c8,
+        -8px -8px 20px #fefefe;
+}
+
+.PackagePrice {
+    font-size: large;
+}
+
+.card-body span {
+    color: goldenrod;
+    font-weight: bold;
+    font-size: large;
+}
+
+#package-section .container {
+    padding: 0rem;
+
+}
+
+.col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width:481px) {
+    .card {
+        width: 19rem;
+    }
+
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+    .card {
+        width: 21rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+/* Ending of Package Section */
+
+
+/* Starting of Services Section */
+
+#service-section .container {
+    margin-top: 5rem;
+}
+
+#service-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid goldenrod;
+    width: 70%;
+    margin: auto;
+}
+.service-icons{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+.sIcons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.sIcons h4{
+    font-size: 20px;
+}
+/* Ending of Services Section */

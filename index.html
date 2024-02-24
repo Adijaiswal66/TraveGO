@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </head>
+  <body>
+    <!-- Starting of Navbar section -->
+    <nav class="navbar navbar-custom navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="logo">
+          <img src="Images/logo.png" alt="logo" />
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#Book"
+                >Booking</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#container-package"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Packages
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#USA">India</a></li>
+                <li><a class="dropdown-item" href="#France">USA</a></li>
+                <li><a class="dropdown-item" href="#India">Bangkok</a></li>
+                <li><a class="dropdown-item" href="#India">France</a></li>
+                <!-- <li><a class="dropdown-item" href="#India">Japan</a></li>
+                  <li><a class="dropdown-item" href="#India">South Africa</a></li>
+                  <li><a class="dropdown-item" href="#India">Morocco</a></li>
+                  <li><a class="dropdown-item" href="#India">Egypt</a></li>
+                  <li><a class="dropdown-item" href="#India">Australia</a></li> -->
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link active .navbar-brand"
+                aria-current="page"
+                href="#container-service"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#Gallery"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/About.html"
+                >About</a
+              >
+            </li>
+          </ul>
+          <!-- <a href="./Login.html"
+              ><button type="button" id="logIn">Log in</button></a
+            >
+            <a href="./Register.html"
+              ><button type="button" id="register">Register</button></a
+            > -->
+        </div>
+      </div>
+    </nav>
+    <!-- Ending of Navbar Section -->
+
+    <div class="container mt-3">
+      <!-- Starting of Home Section -->
+      <div class="welcome">
+        <h2>Welcome to TravelGo</h2>
+        <h1>Visit <span id="changeText"> </span></h1>
+      </div>
+      <!-- Ending of Home Section -->
+
+      <!-- Starting of Booking Section -->
+      <section id="booking-section">
+        <div class="container mt-2">
+          <div class="row">
+            <div class="col-md-6 col-sm-1 my-4">
+              <img
+                class="img-fluid mx-md-5"
+                id="bookImage"
+                src="Images/bookimage.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-md-6 col-sm-1 my-md-5 mb-sm-2">
+              <div class="formInput mx-md-5 mt-md-2 mb-sm-2">
+                <form action="" method="get">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="whereTo"
+                      list="bookingPlaces"
+                      placeholder="Where To"
+                      required
+                    />
+                    <datalist id="bookingPlaces">
+                      <option value="India">India</option>
+                      <option value="USA">USA</option>
+                      <option value="Russia">Russia</option>
+                      <option value="Bangkok">Bangkok</option>
+                      <option value="Thailand">Thailand</option>
+                      <option value="London">London</option>
+                    </datalist>
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="howMany"
+                      placeholder="How Many"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="fromDate"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="toDate"
+                      onclick="getDate()"
+                      required
+                    />
+                  </div>
+                  <textarea
+                    class="form-control mb-3"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    maxlength="500"
+                    minlength="50"
+                    id="textArea"
+                    placeholder="Enter your name & details"
+                    style="resize: none"
+                    required
+                  ></textarea>
+                  <button class="mb-3"  type="submit" onclick="onSubmit()">
+                    Book Now
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Ending of Booking ection -->
+
+      <!-- Starting of Package section -->
+      <section id="package-section">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/indiacardbg.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">India</h5>
+                  <h6 class="card-title">
+                    Welcome to the Mystical Wonders of India!
+                  </h6>
+
+                  <p class="card-text">
+                    Discover India's allure with ancient wonders, diverse
+                    cultures, and breathtaking landscapes. Unforgettable
+                    journeys await in this vibrant tapestry of experiences.
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$800</span></p>
+
+                  <a href="#book"
+                    ><button type="submit" class="p">Book Now</button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/usacardbg.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">United States of America</h5>
+                  <h6 class="card-title">
+                    Welcome to USA: Where Dreams Come to Life!
+                  </h6>
+                  <p class="card-text">
+                    Embark on an American odyssey, where iconic landmarks, rich
+                    cultures, and breathtaking landscapes converge. Discover the
+                    diverse tapestry of the USA's allure.
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ts-star-sharp-half-stroke"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$650</span></p>
+                  <a href="#book"
+                    ><button type="submit" class="PackageBookNowBtn">
+                      Book Now
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/bangkokcardbg.jpg"
+                  height="195rem"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bangkok</h5>
+                  <h6 class="card-title">
+                    Bangkok Bliss: Discover the Heart of Thailand"
+                  </h6>
+                  <p class="card-text">
+                    Journey into the heart of Bangkok, a city of contrasts.
+                    Explore ancient temples, indulge in vibrant street life, and
+                    savor exquisite Thai cuisine in this bustling metropolis
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$150</span></p>
+                  <a href="#book"
+                    ><button type="submit" class="PackageBookNowBtn">
+                      Book Now
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/francecardbg.jpg"
+                  class="card-img-top"
+                  height="195rem"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">France</h5>
+                  <h6 class="card-title">
+                    Discover France: Elegance and Culture
+                  </h6>
+
+                  <p class="card-text">
+                    Discover the allure of the City of Love, Paris, where the
+                    Eiffel Tower stands tall. Lose yourself in the romantic
+                    ambiance that make Paris a timeless destination.
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$400</span></p>
+
+                  <a href="#book"
+                    ><button type="submit" class="p">Book Now</button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/japancardbg.jpg"
+                  class="card-img-top"
+                  height="195rem"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Japan</h5>
+                  <h6 class="card-title">
+                    Japan Essence: Traditions & Natural Beauty
+                  </h6>
+                  <p class="card-text">
+                    Immerse in Kyoto's cultural heritage, featuring historic
+                    temples, traditional tea houses, and cherry blossom gardens,
+                    offering a serene escape into Japanese traditions.
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ts-star-sharp-half-stroke"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$550</span></p>
+                  <a href="#book"
+                    ><button type="submit" class="PackageBookNowBtn">
+                      Book Now
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/southafricacardbg.jpg"
+                  height="195rem"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">South Africa</h5>
+                  <h6 class="card-title">
+                    South Africa: Exploring the Beauty of Safari
+                  </h6>
+                  <p class="card-text">
+                    Discover Cape Town's stunning landscapes, from Table
+                    Mountain to vibrant neighborhoods, blending natural beauty,
+                    diverse wildlife, and rich cultural experiences.
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$250</span></p>
+                  <a href="#book"
+                    ><button type="submit" class="PackageBookNowBtn">
+                      Book Now
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/moroccocardbg.jpg"
+                  class="card-img-top"
+                  height="195rem"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Morocco</h5>
+                  <h6 class="card-title">
+                    Mystical Morocco: Culture and Charm
+                  </h6>
+
+                  <p class="card-text">
+                    Lose yourself in Marrakech's enchanting souks, historic
+                    palaces, and vibrant street life, a city where rich
+                    traditions meet the allure of North African mystique.
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$200</span></p>
+
+                  <a href="#book"
+                    ><button type="submit" class="p">Book Now</button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/egyptcardbg.jpg"
+                  class="card-img-top"
+                  height="195rem"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Egypt</h5>
+                  <h6 class="card-title">
+                    Egyptian Odyssey: Ancient History & Wonders
+                  </h6>
+                  <p class="card-text">
+                    Unveil Cairo's ancient wonders with the Giza Pyramids,
+                    Sphinx, and Egyptian Museum, immersing visitors in the
+                    mysteries and grandeur of ancient civilization.
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ts-star-sharp-half-stroke"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$300</span></p>
+                  <a href="#book"
+                    ><button type="submit" class="PackageBookNowBtn">
+                      Book Now
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-md-5">
+              <div class="card">
+                <img
+                  src="./Images/australiacardbg.jpg"
+                  height="195rem"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Australia</h5>
+                  <h6 class="card-title">
+                    Australia Unveiled: Wonders Down Under
+                  </h6>
+                  <p class="card-text">
+                    Explore Australia's iconic landmarks, from the Sydney Opera
+                    House to Bondi Beach, showcasing a harmonious blend of urban
+                    sophistication and natural beauty.
+                  </p>
+                  <div class="ratings">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                  </div>
+                  <p class="PackagePrice">Price: <span>$350</span></p>
+                  <a href="#book"
+                    ><button type="submit" class="PackageBookNowBtn">
+                      Book Now
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ending of Package section -->
+
+      <!-- Starting of Service Section -->
+      <section id="service-section" class="d-flex flex-row">
+        <div class="container">
+          <div id="service-heading">
+            <h3>Services we provide</h3>
+          </div>
+          <div
+            class="service-icons d-flex flex-coloumn flex-wrap justify-content-between align-items-center"
+          >
+            <div class="sIcons">
+              <lord-icon
+                src="https://cdn.lordicon.com/neujejkf.json"
+                trigger="hover"
+                style="width: 100px; height: 100px"
+              >
+              </lord-icon>
+              <h4>Tour Guide</h4>
+            </div>
+            <div class="sIcons">
+              <lord-icon
+                src="https://cdn.lordicon.com/wtyzzeli.json"
+                trigger="hover"
+                style="width: 100px; height: 100px"
+              >
+              </lord-icon>
+              <h4>Affordable Hotels</h4>
+            </div>
+            <div class="sIcons">
+              <lord-icon
+                src="https://cdn.lordicon.com/fwdowgyd.json"
+                trigger="hover"
+                style="width: 100px; height: 100px"
+              >
+              </lord-icon>
+              <h4>Pet-Friendly</h4>
+            </div>
+            <div class="sIcons">
+              <lord-icon
+                src="https://cdn.lordicon.com/bmlkvhui.json"
+                trigger="hover"
+                style="width: 100px; height: 100px"
+              >
+              </lord-icon>
+              <h4>Photography</h4>
+            </div>
+            <div class="sIcons">
+              <lord-icon
+                src="https://cdn.lordicon.com/tzanwdsf.json"
+                trigger="hover"
+                style="width: 100px; height: 100px"
+              >
+              </lord-icon>
+              <h4>Global Support</h4>
+            </div>
+            <div class="sIcons">
+              <lord-icon
+                src="https://cdn.lordicon.com/dypzookn.json"
+                trigger="hover"
+                style="width: 100px; height: 100px"
+              >
+              </lord-icon>
+              <h4>Budget-Friendly</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ending of Service Section -->
+    </div>
+    <script src="./js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
