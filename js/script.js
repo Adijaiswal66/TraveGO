@@ -41,8 +41,7 @@ function onSubmit() {
     whereTo.value != 0 &&
     howMany.value != 0 &&
     fromDate.value != "" &&
-    toDate.value != "" &&
-    textArea.value != ""
+    toDate.value != "" 
   ) {
     window.alert("Booking Successful");
     whereTo.value = null;
