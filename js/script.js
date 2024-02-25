@@ -1,9 +1,9 @@
 const howMany = document.getElementById("howMany");
-const whereTo = document.getElementById("whereTo");
 const fromDate = document.getElementById("fromDate");
 const toDate = document.getElementById("toDate");
 const textArea = document.getElementById("textArea");
 const form = document.querySelector("form");
+const whereTo = document.getElementById("whereTo");
 
 var todayDate = new Date();
 
@@ -30,22 +30,25 @@ function getDate() {
   var fromDate = selectedDateInput.value;
 
   // You can now use the selectedDate value as needed
-  toDate.setAttribute("min", fromDate);
+  document.getElementById("toDate").setAttribute("min", fromDate);
 }
+fromDate.addEventListener("input", function () {
+  document.getElementById("toDate").removeAttribute("disabled");
+});
 
 function onSubmit() {
-  
   if (
     whereTo.value != 0 &&
     howMany.value != 0 &&
-    fromDate.value != null &&
-    toDate != null
-  ){
+    fromDate.value != "" &&
+    toDate.value != "" &&
+    textArea.value != ""
+  ) {
     window.alert("Booking Successful");
-    whereTo.value = null
-    howMany.value = null
-    fromDate.value = null
-    toDate.value = null
-    textArea.value = null
+    whereTo.value = null;
+    howMany.value = null;
+    fromDate.value = null;
+    toDate.value = null;
+    textArea.value = null;
   }
 }
