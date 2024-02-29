@@ -12,6 +12,10 @@ body {
     /* background-attachment: fixed; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .dropdown:hover>.dropdown-menu {
     display: block;
 }
@@ -275,8 +279,6 @@ nav div div img {
     .card {
         width: 19rem;
     }
-
-
 }
 
 
@@ -294,7 +296,8 @@ nav div div img {
 /* Starting of Services Section */
 
 #service-section .container {
-    margin-top: 5rem;
+    margin-top: 9rem;
+    margin-bottom: 6rem;
 }
 
 #service-heading {
@@ -306,18 +309,69 @@ nav div div img {
     width: 70%;
     margin: auto;
 }
-.service-icons{
+
+.service-icons {
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
-.sIcons{
+
+.sIcons {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
 }
 
-.sIcons h4{
+.sIcons h4 {
     font-size: 20px;
 }
+
 /* Ending of Services Section */
+.gallery img {
+    object-fit: cover;
+    aspect-ratio: 1;
+    width: 100%;
+    margin: 0.7rem;
+    border-radius: 5px;
+}
+
+.gallery img:hover{
+    transform: scale(1.1,1.1);
+    transition: all 0.5s ease;
+}
+
+#gallery-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid goldenrod;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+    .card {
+        width: 21rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .gallery img {
+        object-fit: cover;
+        aspect-ratio: 1;
+        width: 100%;
+        margin: 0.5rem;
+        border-radius: 6px;
+    }
+    #gallery-heading{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid goldenrod;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+}
