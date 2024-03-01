@@ -297,7 +297,7 @@ nav div div img {
 
 #service-section .container {
     margin-top: 9rem;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
 }
 
 #service-heading {
@@ -327,6 +327,8 @@ nav div div img {
 }
 
 /* Ending of Services Section */
+
+/* Starting of Gallery section */
 .gallery img {
     object-fit: cover;
     aspect-ratio: 1;
@@ -335,12 +337,12 @@ nav div div img {
     border-radius: 5px;
 }
 
-.gallery img:hover{
-    transform: scale(1.1,1.1);
+.gallery img:hover {
+    transform: scale(1.1, 1.1);
     transition: all 0.5s ease;
 }
 
-#gallery-heading{
+#gallery-heading {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -352,11 +354,6 @@ nav div div img {
 }
 
 @media screen and (min-width: 320px) and (max-width:480px) {
-    .card {
-        width: 21rem;
-        margin-bottom: 1.5rem;
-    }
-
     .gallery img {
         object-fit: cover;
         aspect-ratio: 1;
@@ -364,7 +361,8 @@ nav div div img {
         margin: 0.5rem;
         border-radius: 6px;
     }
-    #gallery-heading{
+
+    #gallery-heading {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -375,3 +373,109 @@ nav div div img {
         margin-bottom: 2rem;
     }
 }
+
+/* Ending of Gallery section */
+
+/* Starting of About Us section */
+#AboutUs-section .container {
+    /* height: auto;
+    width: auto; */
+    background-color: #e8e8e8;
+    border-radius: 6px;
+}
+
+#AboutUsHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid goldenrod;
+    width: 30%;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+    #AboutUsHeading {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid goldenrod;
+        width: 50%;
+        margin: auto;
+        margin-top: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    .row1 {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .AboutUsImage {
+        object-fit: cover;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.AboutUsImage {
+    object-fit: cover;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.AboutUsImage img {
+    border-radius: 3px;
+}
+
+.AboutUsDesc {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Ending of About us section */
+
+/* Starting of Footer section */
+#Footer-section .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    height: 10rem;
+    margin: auto;
+    width: 50%;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-top: -2rem;
+}
+
+.logoIcons {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+    .logoIcons {
+        margin-right: 0.6rem;
+        margin-left: 0.6rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ending of Footer section */
