@@ -147,6 +147,27 @@ nav div div img {
     width: 100%;
 }
 
+#startDate {
+    display: none;
+}
+
+#endDate {
+    display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+    #startDate {
+        display: block;
+        font-family: "Work Sans", sans-serif;
+        margin-left: 0.5rem;
+    }
+
+    #endDate {
+        display: block;
+        font-family: "Work Sans", sans-serif;
+        margin-left: 0.5rem;
+    }
+}
 
 /* Ending of Hero Section  */
 
@@ -298,6 +319,12 @@ nav div div img {
 #service-section .container {
     margin-top: 9rem;
     margin-bottom: 3rem;
+}
+@media screen and (min-width: 320px) and (max-width:480px) {
+    #service-section .container {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
 }
 
 #service-heading {
